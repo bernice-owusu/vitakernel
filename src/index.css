@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Libre Baskerville', Georgia, serif;
+    --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-inter: 'Inter', sans-serif;
+    --primary: #174D35;
+    --primary-hover: #123d2a;
+    --mango-gold: #E5A928;
+    --leaf-green: #689857;
+    --charcoal: #292D2A;
+    --dark: #292D2A;
+    --body-text: #3D4440;
+    --cream-bg: #FAF8F5;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: var(--body-text);
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #FFFFFF;
+  }
+}
+
+.bg-deep-green { background-color: #174D35; }
+.bg-mango-gold { background-color: #E5A928; }
+.bg-leaf-green { background-color: #689857; }
+.text-deep-green { color: #174D35; }
+.text-mango-gold { color: #E5A928; }
+.text-leaf-green { color: #689857; }
+.border-deep-green { border-color: #174D35; }
+.border-mango-gold { border-color: #E5A928; }
+
+.font-serif-baskerville {
+  font-family: 'Libre Baskerville', Georgia, serif;
+}
+
+.font-sans-dm {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Float animation for bottles */
+@keyframes softFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-soft-float {
+  animation: softFloat 4.5s ease-in-out infinite;
+}
+
+.animate-soft-float-delay {
+  animation: softFloat 5s ease-in-out 1.5s infinite;
+}
+
+/* Marquee for infinite carousel */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Green pill button shadow */
+.healfio-btn-shadow,
+.vitakernel-btn-shadow {
+  box-shadow: 0px 4px 20px 0px rgba(1, 120, 92, 0.26);
+}
+
+.healfio-btn-shadow:hover,
+.vitakernel-btn-shadow:hover {
+  box-shadow: 0px 6px 24px 0px rgba(1, 120, 92, 0.38);
+}
+
+/* Card hover zoom */
+.zoom-card-img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.group:hover .zoom-card-img {
+  transform: scale(1.06);
+}
+
+/* Hide scrollbar for mobile carousels and tabs */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

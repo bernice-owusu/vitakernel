@@ -1,0 +1,6 @@
+{
+  "name": "VitaKernel",
+  "description": "Pioneering African circular bio innovation: upcycling agricultural mango seed waste into cold pressed botanical oil and clean biomass eco briquettes in Ghana.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
